@@ -146,7 +146,7 @@
             <input type="hidden" name="_subject" value="Stelle VideoToPhoto - Support Request">
             <input type="hidden" name="_captcha" value="true">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" id="redirectUrl">
+            <input type="hidden" name="_next" value="https://stellelibs.github.io/stelle_apps_pp/support.html?sent=true">
 
             <div>
                 <label for="name">Your name</label>
@@ -190,9 +190,6 @@
     </div>
 
     <script>
-        // Set redirect URL to current page with success parameter
-        document.getElementById('redirectUrl').value = 'https://stellelibs.github.io/stelle_apps_pp/support.html?sent=true';
-
         // Show success message if redirected back after submission
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.get('sent') === 'true') {
